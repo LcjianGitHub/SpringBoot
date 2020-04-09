@@ -1,0 +1,38 @@
+server:
+  port: 1110
+spring:
+  profiles:
+    active: dev       #激活某个 文档块配置
+#命令行方式激活某个文档块    --spring.profiles.active=dev
+#jvm参数     -Dspring.profiles.active=dev
+#java -jar jar包名 --spring.profiles.active=dev
+#java -jar jar包名 --spring.config.location=C:/application.properties
+#java -jar jar包名 --server.port=1113 --server.context-path=/abc
+# server.context-path=/abc  设置项目路径   localhost：1113/abc/hello
+
+---
+
+server:
+  port: 1111
+spring:
+  profiles: dev        #开发环境
+---
+server:
+  port: 1112
+spring:
+  profiles: prod      #生产环境
+
+
+#person:
+#  age: ${random.int}
+#  name: hehe${random.uuid}
+#  boss: false
+#  birth: 2020/01/01
+#  maps: {k1: v1,k2: v2}
+#  list:
+#    - lisi
+#    - zhou
+#  dog:
+#    name: ${person.name}_狗
+#    age: ${person.dd:4} #取不到值时，设置默认值
+
