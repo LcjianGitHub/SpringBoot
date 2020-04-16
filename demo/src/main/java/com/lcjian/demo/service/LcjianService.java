@@ -30,4 +30,9 @@ public class LcjianService {
         }
         return result;
     }
+    public static void main(String[] args) {
+        String aaa = "dsfd='234'";
+        aaa = aaa.replace("'","");
+        System.out.println(aaa);
+    }
 }
